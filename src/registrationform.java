@@ -10,9 +10,8 @@
  */
 public class registrationform extends javax.swing.JFrame {
 
-    /**
-     * Creates new form registrationform
-     */
+   
+     
     public registrationform() {
         initComponents();
     }
@@ -28,18 +27,18 @@ public class registrationform extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        jPasswordField2 = new javax.swing.JPasswordField();
-        jPasswordField3 = new javax.swing.JPasswordField();
-        jLabel9 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        title2 = new javax.swing.JLabel();
+        usertxt2 = new javax.swing.JLabel();
+        userfield2 = new javax.swing.JTextField();
+        emailtxt = new javax.swing.JLabel();
+        emailfield = new javax.swing.JTextField();
+        phonenumtxt = new javax.swing.JLabel();
+        phonenumfield = new javax.swing.JTextField();
+        passtxt = new javax.swing.JLabel();
+        passfield2 = new javax.swing.JPasswordField();
+        cpasstxt = new javax.swing.JLabel();
+        cpassfield = new javax.swing.JPasswordField();
+        registerbtm = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(860, 610));
@@ -51,73 +50,78 @@ public class registrationform extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 204, 102));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 30)); // NOI18N
-        jLabel2.setText("REGISTRATION FORM");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, 350, 60));
+        title2.setFont(new java.awt.Font("Arial", 1, 30)); // NOI18N
+        title2.setText("REGISTRATION FORM");
+        jPanel2.add(title2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, 350, 60));
 
-        jLabel5.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel5.setText("USERNAME");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 170, 80, -1));
+        usertxt2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        usertxt2.setText("USERNAME");
+        jPanel2.add(usertxt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 170, 80, -1));
 
-        jTextField2.setBackground(new java.awt.Color(255, 204, 102));
-        jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        userfield2.setBackground(new java.awt.Color(255, 204, 102));
+        userfield2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        userfield2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        userfield2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                userfield2ActionPerformed(evt);
             }
         });
-        jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 260, 280, 40));
+        jPanel2.add(userfield2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 190, 280, 40));
 
-        jLabel6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel6.setText("EMAIL");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 240, 80, -1));
+        emailtxt.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        emailtxt.setText("EMAIL");
+        jPanel2.add(emailtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 240, 80, -1));
 
-        jLabel7.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel7.setText("PHONE NUMBER");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 310, 120, -1));
-
-        jTextField3.setBackground(new java.awt.Color(255, 204, 102));
-        jTextField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        emailfield.setBackground(new java.awt.Color(255, 204, 102));
+        emailfield.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        emailfield.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        emailfield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                emailfieldActionPerformed(evt);
             }
         });
-        jPanel2.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 330, 280, 40));
+        jPanel2.add(emailfield, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 260, 280, 40));
 
-        jLabel8.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel8.setText("PASSWORD");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 380, 80, -1));
+        phonenumtxt.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        phonenumtxt.setText("PHONE NUMBER");
+        jPanel2.add(phonenumtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 310, 120, -1));
 
-        jPasswordField2.setBackground(new java.awt.Color(255, 204, 102));
-        jPasswordField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel2.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 400, 280, 40));
-
-        jPasswordField3.setBackground(new java.awt.Color(255, 204, 102));
-        jPasswordField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel2.add(jPasswordField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 470, 280, 40));
-
-        jLabel9.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel9.setText("CONFIRM PASSWORD");
-        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 450, 160, -1));
-
-        jTextField4.setBackground(new java.awt.Color(255, 204, 102));
-        jTextField4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        phonenumfield.setBackground(new java.awt.Color(255, 204, 102));
+        phonenumfield.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        phonenumfield.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        phonenumfield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                phonenumfieldActionPerformed(evt);
             }
         });
-        jPanel2.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 190, 280, 40));
+        jPanel2.add(phonenumfield, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 330, 280, 40));
 
-        jButton2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jButton2.setText("REGISTER NOW");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        passtxt.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        passtxt.setText("PASSWORD");
+        jPanel2.add(passtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 380, 80, -1));
+
+        passfield2.setBackground(new java.awt.Color(255, 204, 102));
+        passfield2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        passfield2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel2.add(passfield2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 400, 280, 40));
+
+        cpasstxt.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        cpasstxt.setText("CONFIRM PASSWORD");
+        jPanel2.add(cpasstxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 450, 160, -1));
+
+        cpassfield.setBackground(new java.awt.Color(255, 204, 102));
+        cpassfield.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        cpassfield.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel2.add(cpassfield, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 470, 280, 40));
+
+        registerbtm.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        registerbtm.setText("REGISTER NOW");
+        registerbtm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                registerbtmActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 540, 230, 40));
+        jPanel2.add(registerbtm, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 540, 230, 40));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 660));
 
@@ -126,21 +130,21 @@ public class registrationform extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void emailfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailfieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_emailfieldActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void phonenumfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_phonenumfieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_phonenumfieldActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void userfield2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userfield2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_userfield2ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void registerbtmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerbtmActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_registerbtmActionPerformed
 
     /**
      * @param args the command line arguments
@@ -178,19 +182,19 @@ public class registrationform extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPasswordField cpassfield;
+    private javax.swing.JLabel cpasstxt;
+    private javax.swing.JTextField emailfield;
+    private javax.swing.JLabel emailtxt;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField2;
-    private javax.swing.JPasswordField jPasswordField3;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
+    private javax.swing.JPasswordField passfield2;
+    private javax.swing.JLabel passtxt;
+    private javax.swing.JTextField phonenumfield;
+    private javax.swing.JLabel phonenumtxt;
+    private javax.swing.JButton registerbtm;
+    private javax.swing.JLabel title2;
+    private javax.swing.JTextField userfield2;
+    private javax.swing.JLabel usertxt2;
     // End of variables declaration//GEN-END:variables
 }
