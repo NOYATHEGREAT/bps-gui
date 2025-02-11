@@ -1,13 +1,15 @@
 import java.awt.Color;
+import javax.swing.JOptionPane;
 public class loginform extends javax.swing.JFrame {
 
   
     public loginform() {
         initComponents();
     }
-
-  
-     
+    Color orange = new Color(255,204,102);
+    Color lightorange = new Color(245,216,127);
+    Color white = new Color(255,255,255);
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -71,6 +73,11 @@ public class loginform extends javax.swing.JFrame {
         passfield1.setBackground(new java.awt.Color(255, 204, 102));
         passfield1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         passfield1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        passfield1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passfield1ActionPerformed(evt);
+            }
+        });
         bodycolor.add(passfield1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 330, 280, 40));
 
         loginbtm.setBackground(new java.awt.Color(255, 255, 255));
@@ -81,6 +88,9 @@ public class loginform extends javax.swing.JFrame {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 loginbtmMouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                loginbtmMouseExited(evt);
+            }
         });
         loginbtm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,8 +99,22 @@ public class loginform extends javax.swing.JFrame {
         });
         bodycolor.add(loginbtm, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, 140, 40));
 
+        createbtm.setBackground(new java.awt.Color(255, 255, 255));
         createbtm.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         createbtm.setText("CREATE ACCOUNT");
+        createbtm.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                createbtmMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                createbtmMouseExited(evt);
+            }
+        });
+        createbtm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createbtmActionPerformed(evt);
+            }
+        });
         bodycolor.add(createbtm, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 460, 230, 40));
 
         jPanel4.add(bodycolor, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 0, 440, 610));
@@ -103,14 +127,42 @@ public class loginform extends javax.swing.JFrame {
     private void userfield1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userfield1ActionPerformed
        
     }//GEN-LAST:event_userfield1ActionPerformed
-
+  
     private void loginbtmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginbtmActionPerformed
-        
+                                         
+    String username = userfield1.getText();
+    String password = passfield1.getText();
+
+    if (username.isEmpty() || password.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Username and password are required or or Create account if needed.", "Error", JOptionPane.ERROR_MESSAGE);
+        return;
+    } 
+    
     }//GEN-LAST:event_loginbtmActionPerformed
 
-    private void loginbtmMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginbtmMouseEntered
+    private void loginbtmMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginbtmMouseExited
+    loginbtm.setBackground(white);
+    }//GEN-LAST:event_loginbtmMouseExited
 
+    private void loginbtmMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginbtmMouseEntered
+    loginbtm.setBackground(orange);
     }//GEN-LAST:event_loginbtmMouseEntered
+
+    private void createbtmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createbtmActionPerformed
+     new registrationform().setVisible(true);     
+    }//GEN-LAST:event_createbtmActionPerformed
+
+    private void createbtmMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_createbtmMouseEntered
+        createbtm.setBackground(orange);
+    }//GEN-LAST:event_createbtmMouseEntered
+
+    private void createbtmMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_createbtmMouseExited
+        createbtm.setBackground(white);
+    }//GEN-LAST:event_createbtmMouseExited
+
+    private void passfield1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passfield1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passfield1ActionPerformed
 
     /**
      * @param args the command line arguments
